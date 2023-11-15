@@ -7,12 +7,21 @@ The Casting Agency models a company that is responsible for creating movies and 
 ```bash
 pip install -r requirements.txt
 ```
+## Deployment
+The Casting Agency API is deployed on Render. You can access the API using the following link:
 
-to run the app:
+https://casting-agency-vraf.onrender.com 
+
+
+Before running the API, make sure to set the required environment variables:
+
 
 ```bash
   set FLASK_APP=app.py
   set FLASK_ENV=development
+```
+To start the API, use the following command:
+```
   python -m flask run 
 ```
 
@@ -67,5 +76,5 @@ Please note that the ```GET / ```and ```GET /actors``` and ```GET /movies``` end
 
 Example commands using curl:
 ```
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_TOKEN" -d '{"name":"Dwayne Johnson","age":51,"gender":"Male"}' http://localhost:5000/actors
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_TOKEN" -d '{"name":"Dwayne Johnson","age":51,"gender":"Male","movie_id":1}' https://casting-agency-vraf.onrender.com/actors
 ```
